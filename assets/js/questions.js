@@ -5,9 +5,14 @@ var questions = [
       answer: "console.log()"
     },
     {
-      question: "What does the '=== ' operator do in JavaScript?",
-      options: ["Checks equality without type coercion", "Assigns a value to a variable", "Performs a strict comparison", "Concatenates two strings"],
-      answer: "Performs a strict comparison"
+      question: "How do you stop an interval timer in Javascript?",
+      options: ["clearInterval", "clearTimer", "intervalOver", "None of the above"],
+      answer: "clearInterval"
     },
+    {
+        question: "How do you write a comment in javascript?",
+        options: ["/ * */", "//", "#", "<!-- -->"],
+        answer: "//"
+      },
   ];
   
