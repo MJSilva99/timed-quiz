@@ -75,3 +75,15 @@ function checkAnswer(event) {
     end();
   }
 }
+
+function end() {
+  // End screen
+  document.getElementById("questions").classList.add("hide");
+  document.getElementById("end-screen").classList.remove("hide");
+
+  // Final score
+  document.getElementById("final-score").textContent = time;
+
+  // Stops timer
+  timeDisplay.textContent = 0;
+}
