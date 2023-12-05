@@ -27,6 +27,8 @@ function displayQuestion() {
   var currentQuestion = questions[currentQuestionIndex];
   questionEl.textContent = currentQuestion.questionText;
 
+  choicesEl.innerHTML = "";
+
 
   // For loop for buttons
   for (var i = 0; i < currentQuestion.choices.length; i++) {
@@ -35,4 +37,18 @@ function displayQuestion() {
     button.textContent = options;
     choicesEl.appendChild(button);
   }
+}
+
+// Timer function
+function timer() {
+
+  var timerInterval = setInterval(function () {
+    time--;
+    timeDisplay.textContent = time + ' seconds remaining';;
+
+    if (time <= 0 || currentQuestionIndex === questions.length) {
+      clearInterval(timerInterval);
+      end();
+    }
+  }, 1000);
 }
