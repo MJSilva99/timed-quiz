@@ -25,7 +25,7 @@ Open the website and start the quiz. Questions will appear and a 90 second timer
 
 The screenshot below shows how the application works.
 
-![Alt text](/assets/images/quiz.gif)
+![Alt text](/assets/images/quiz.png)
 
 ## License
 
