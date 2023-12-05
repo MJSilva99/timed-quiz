@@ -52,3 +52,26 @@ function timer() {
     }
   }, 1000);
 }
+
+function checkAnswer(event) {
+  var selectedAnswer = event.target.textContent;
+
+  if (selectedAnswer === questions[currentQuestionIndex].answer) {
+    feedbackEl.textContent = "Correct!";
+  } else {
+    feedbackEl.textContent = "Incorrect! -10 seconds";
+    time -= 10;
+  }
+
+  feedbackEl.classList.remove("hide");
+
+
+  // Next question
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < questions.length) {
+    displayQuestion();
+  } else {
+    end();
+  }
+}
