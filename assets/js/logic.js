@@ -21,3 +21,18 @@ function startQuiz() {
 
   displayQuestion();
 }
+
+// Displaying question
+function displayQuestion() {
+  var currentQuestion = questions[currentQuestionIndex];
+  questionEl.textContent = currentQuestion.questionText;
+
+
+  // For loop for buttons
+  for (var i = 0; i < currentQuestion.choices.length; i++) {
+    var options = currentQuestion.choices[i];
+    var button = document.createElement("button");
+    button.textContent = options;
+    choicesEl.appendChild(button);
+  }
+}
